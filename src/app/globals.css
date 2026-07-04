@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink antialiased;
+}
+
+/* Article prose tweaks layered on top of @tailwindcss/typography */
+.prose :where(h2):not(:where([class~='not-prose'] *)) {
+  @apply mt-10 scroll-mt-24 font-serif;
+}
+.prose :where(h3):not(:where([class~='not-prose'] *)) {
+  @apply mt-8 scroll-mt-24;
+}
+.prose :where(a):not(:where([class~='not-prose'] *)) {
+  @apply text-brand-700 underline-offset-2;
+}
+.prose :where(blockquote):not(:where([class~='not-prose'] *)) {
+  @apply border-l-4 border-brand-300 bg-brand-50 not-italic text-ink;
+}
+.prose :where(table):not(:where([class~='not-prose'] *)) {
+  @apply overflow-hidden rounded-lg text-sm;
+}
+.prose :where(thead th):not(:where([class~='not-prose'] *)) {
+  @apply bg-brand-50;
+}

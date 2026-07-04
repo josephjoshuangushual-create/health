@@ -1,0 +1,4 @@
+# Google AdSense ads.txt
+# Replace pub-0000000000000000 with your own AdSense publisher ID once your
+# account is approved. This file authorizes Google to sell your ad inventory.
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
