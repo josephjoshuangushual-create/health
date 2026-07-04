@@ -12,7 +12,17 @@ html {
 }
 
 body {
-  @apply bg-white text-ink antialiased;
+  /* Soft light-blue page background; cards and the header stay white. */
+  @apply bg-brand-50 text-ink antialiased;
+}
+
+/* Keep long-form article copy in the blue ink, not the default prose gray. */
+.prose {
+  --tw-prose-body: theme('colors.ink.DEFAULT');
+  --tw-prose-headings: theme('colors.brand.900');
+  --tw-prose-bold: theme('colors.brand.900');
+  --tw-prose-bullets: theme('colors.brand.400');
+  --tw-prose-counters: theme('colors.brand.600');
 }
 
 /* Article prose tweaks layered on top of @tailwindcss/typography */
